@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Energizantes Colombianos</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <header>
+        <h1>Tienda de Energizantes Colombianos</h1>
+        <p>Compra las mejores bebidas energizantes producidas en Colombia y recibe tu pedido en la puerta de tu casa.</p>
+    </header>
+
+    <!-- Sección del video promocional -->
+    <section id="video">
+        <h2>Video Promocional</h2>
+        <div class="video-container">
+            <video controls>
+                <source src="videos/promocional.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de videos.
+            </video>
+        </div>
+        <p>Mira nuestro video y descubre más sobre nuestras energizantes colombianos que te mantendrán activo todo el día.</p>
+    </section>
+
+    <section id="productos">
+        <h2>Nuestros Productos</h2>
+        <p>Aquí puedes encontrar los energizantes colombianos más populares y sus precios. ¡Aumenta tu energía con un solo clic!</p>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Imagen</th>
+                    <th>Descripción</th>
+                    <th>Contenido</th>
+                    <th>Precio (COP)</th>
+                    <th>Comprar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Vive100</strong></td>
+                    <td><img src="imagenes/vive100.jpg" alt="Vive100" width="100"></td>
+                    <td>Energizante líder en Colombia, conocido por su fórmula revitalizante.</td>
+                    <td>400ml</td>
+                    <td>$3,000</td>
+                    <td><a href="#formulario" class="buy-btn" data-producto="Vive100">Comprar</a></td>
+                </tr>
+                <tr>
+                    <td><strong>Speed Max</strong></td>
+                    <td><img src="imagenes/speed_max.jpg" alt="Speed Max" width="100"></td>
+                    <td>Una bebida con alto contenido de cafeína para un impulso instantáneo de energía.</td>
+                    <td>250ml</td>
+                    <td>$4,500</td>
+                    <td><a href="#formulario" class="buy-btn" data-producto="Speed Max">Comprar</a></td>
+                </tr>
+                <tr>
+                    <td><strong>Volt</strong></td>
+                    <td><img src="imagenes/volt.jpg" alt="Volt" width="100"></td>
+                    <td>Una opción con sabor refrescante y gran capacidad de revitalización.</td>
+                    <td>600ml</td>
+                    <td>$4,000</td>
+                    <td><a href="#formulario" class="buy-btn" data-producto="Volt">Comprar</a></td>
+                </tr>
+                <tr>
+                    <td><strong>Big Cola Energy</strong></td>
+                    <td><img src="imagenes/big_cola_energy.jpg" alt="Big Cola Energy" width="100"></td>
+                    <td>La bebida de Big Cola con ingredientes energizantes, ideal para mantenerte activo.</td>
+                    <td>300ml</td>
+                    <td>$3,500</td>
+                    <td><a href="#formulario" class="buy-btn" data-producto="Big Cola Energy">Comprar</a></td>
+                </tr>
+                <tr>
+                    <td><strong>ENERGY Hatsu</strong></td>
+                    <td><img src="imagenes/hatsu_energy.jpg" alt="ENERGY Hatsu" width="100"></td>
+                    <td>Energizante natural con ingredientes de alta calidad y sabor único.</td>
+                    <td>355ml</td>
+                    <td>$5,000</td>
+                    <td><a href="#formulario" class="buy-btn" data-producto="ENERGY Hatsu">Comprar</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="formulario">
+        <h2>Formulario de Pedido</h2>
+        <form id="pedido-form" action="enviar_pedido.php" method="post">
+            <label for="nombre">Nombre:</label><br>
+            <input type="text" id="nombre" name="nombre" required><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="producto">Selecciona tu energizante:</label><br>
+            <select id="producto" name="producto">
+                <option value="vive100">Vive100</option>
+                <option value="speedmax">Speed Max</option>
+                <option value="volt">Volt</option>
+                <option value="bigcolaenergy">Big Cola Energy</option>
+                <option value="hatsuenergy">ENERGY Hatsu</option>
+            </select><br><br>
+
+            <label for="cantidad">Cantidad:</label><br>
+            <input type="number" id="cantidad" name="cantidad" required><br><br>
+
+            <label for="direccion">Dirección de Entrega:</label><br>
+            <input type="text" id="direccion" name="direccion" required><br><br>
+
+            <label for="mensaje">Mensaje adicional (opcional):</label><br>
+            <textarea id="mensaje" name="mensaje" rows="4"></textarea><br><br>
+
+            <input type="submit" value="Realizar Pedido">
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2024 Energizantes Colombianos - Todos los derechos reservados</p>
+        <p>Contacto: <a href="mailto:ventas@energizantescolombianos.com">ventas@energizantescolombianos.com</a></p>
+    </footer>
+
+    <!-- Agregar JavaScript aquí -->
+    <script src="scripts.js"></script>
+</body>
+</html>
